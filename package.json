@@ -27,7 +27,11 @@
     "uglify-js": "^2.4.17"
   },
   "dependencies": {
+    "accessor": "^1.1.1",
+    "async-waterfall": "^0.1.5",
     "basic-browser-request": "^7.1.0",
+    "call-next-tick": "^2.0.1",
+    "d3-selection": "^1.1.0",
     "handle-error-web": "^1.0.1",
     "qs": "^6.3.0",
     "route-state": "^1.0.2",

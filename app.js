@@ -1,43 +1,31 @@
-var qs = require('qs');
-var handleError = require('handle-error-web');
-var request = require('basic-browser-request');
-var sb = require('standard-bail')();
+/* global gapi, window */
+
 var RouteState = require('route-state');
+var showCalendarsFlow = require('./flows/show-calendars-flow');
+var handleError = require('handle-error-web');
 
 var routeState = RouteState({
   followRoute: route,
   windowObject: window  
 });
 
-var token;
+var accessToken;
 var idToken;
 
 ((function go() {
+  window.onSignIn = onSignIn;
 })());
 
 function route(routeDict) {
   // TODO: Routing logic
-  getCalendars();
+  showCalendarsFlow({
+    accessToken: accessToken,
+    idToken: idToken,
+    onSelectedCalendarsUpdate: onSelectedCalendarsUpdate
+  });
 }
 
-function getCalendars() {
-  var reqOpts = {
-    method: 'GET',
-    url: 'https://content.googleapis.com/calendar/v3/users/me/calendarList?' +
-      'key=' + idToken + '&' +
-      'fields=items(id,summary)',
-    headers: {
-      authorization: 'Bearer ' + token
-    }
-  };
-  request(reqOpts, sb(renderCalendars, handleError));
-}
-
-function renderCalendars(res, body) {
-  console.log('calendars', body);
-}
-
-window.onSignIn = function onSignIn(googleUser) {
+function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   console.log('Name: ' + profile.getName());
   // console.log('Image URL: ' + profile.getImageUrl());
@@ -51,11 +39,16 @@ window.onSignIn = function onSignIn(googleUser) {
 
 function grantSucceeded(grantResult) {
   // console.log(grantResult);
-  token = grantResult.Zi.access_token;
+  accessToken = grantResult.Zi.access_token;
   idToken = grantResult.Zi.id_token;
   routeState.routeFromHash();
 }
 
 function grantFailed(fail) {
   handleError(new Error('Grant failed: ' + JSON.stringify(fail)));
+}
+
+function onSelectedCalendarsUpdate(selectedCalendars) {
+  console.log('selectedCalendars:', selectedCalendars);
+  // TODO: Update routes, then follow route to show breakdowns flow
 }
