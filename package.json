@@ -1,0 +1,36 @@
+{
+  "name": "where-is-your-time",
+  "version": "1.0.0",
+  "description": "App that figures out where your time went according to Google Calendar.",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jimkang/where-is-your-time.git"
+  },
+  "keywords": [],
+  "author": "Jim Kang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jimkang/where-is-your-time/issues"
+  },
+  "homepage": "https://github.com/jimkang/where-is-your-time",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browserify": "^8.1.3",
+    "eslint": "^3.4.0",
+    "purify-css": "^1.1.9",
+    "tape": "^3.0.3",
+    "uglify-js": "^2.4.17"
+  },
+  "dependencies": {
+    "basic-browser-request": "^7.1.0",
+    "handle-error-web": "^1.0.1",
+    "qs": "^6.3.0",
+    "route-state": "^1.0.2",
+    "standard-bail": "^2.0.1"
+  }
+}
