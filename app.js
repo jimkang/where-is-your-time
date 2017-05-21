@@ -31,9 +31,10 @@ function route() {
   );
   flowlocks.startFlows(state);
 
-  function onSelectedCalendarsUpdate(selectedCalendars) {
-    console.log('selectedCalendars:', selectedCalendars);
-    // TODO: Update routes, then follow route to show breakdowns flow
+  function onSelectedCalendarsUpdate(updatedState) {
+    console.log('Calendars updated. Cancelling and restarting flow.');
+    flowlocks.cancel();
+    callNextTick(flowlocks.startFlows, updatedState);
   }
 }
 

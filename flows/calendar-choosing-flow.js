@@ -78,7 +78,7 @@ function calendarChoosingFlow(cell, flowDone) {
 
   function flowOnSelectedCalendarsUpdate(selectedCalendars) {
     cell.storage.setItem('selectedCalendars', JSON.stringify(selectedCalendars));
-    cell.onSelectedCalendarsUpdate(selectedCalendars);
+    cell.onSelectedCalendarsUpdate(cell);
   }
 }
 

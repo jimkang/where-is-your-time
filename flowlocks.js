@@ -11,6 +11,7 @@ function Flowlocks(flows, flowsDone) {
 
   function startFlows(cell) {
     if (flows.length > 0) {
+      cancelled = false;
       waterfall([kickoff].concat(flows.slice(1).map(wrapFlow)), flowsDone);
     }
     else {
