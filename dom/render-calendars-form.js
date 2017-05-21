@@ -47,5 +47,4 @@ function renderCalendarsForm({calendars, onSelectedCalendarsUpdate}, done) {
   }
 }
 
-
 module.exports = renderCalendarsForm;

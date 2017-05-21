@@ -13,7 +13,7 @@ build:
 	$(BROWSERIFY) $(TRANSFORM_SWITCH) app.js | $(UGLIFY) -c -m -o index.js
 
 test:
-	node tests/basictests.js
+	node tests/flowlocks-tests.js
 
 pushall:
 	git push origin gh-pages
