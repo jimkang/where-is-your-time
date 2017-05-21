@@ -1,6 +1,7 @@
 var d3 = require('d3-selection');
 var accessor = require('accessor');
 var callNextTick = require('call-next-tick');
+var findWhere = require('lodash.findwhere');
 
 var getId = accessor();
 var getName = accessor('summary');
@@ -25,30 +26,26 @@ function renderCalendarsForm({calendars, onSelectedCalendarsUpdate}, done) {
 
   var calendarItemsToUpdate = newCalendarItems.merge(calendarItems);
   calendarItemsToUpdate.selectAll('span').text(getName);
-  calendarItemsToUpdate.selectAll('input').attr('checked', syncCheckboxToSelectionState);
+  calendarItemsToUpdate.selectAll('input').attr('checked', isSelected);
 
   callNextTick(done);
 
-  function onCheckboxClick(calendar) {
-    syncSelectionStateToCheckbox(calendar, this);
+  function onCheckboxClick(selectedCalendar) {
+    syncSelectionStateToCheckbox(selectedCalendar.id, this);
     updateSelectedCalendars();
+  }
+
+  function syncSelectionStateToCheckbox(selectedCalendar, checkboxEl) {
+    var calendar = findWhere(calendars, {id: selectedCalendar});
+    calendar.selected = checkboxEl.checked;
   }
 
   function updateSelectedCalendars() {
     if (onSelectedCalendarsUpdate) {
-      var calendars = form.selectAll('.calendar-option').data();
       onSelectedCalendarsUpdate(calendars.filter(isSelected));
     }
   }
 }
 
-function syncCheckboxToSelectionState(calendar) {
-  var checkboxEl = this;
-  checkboxEl.checked = calendar.selected;
-}
-
-function syncSelectionStateToCheckbox(calendar, checkboxEl) {
-  calendar.selected = checkboxEl.checked;
-}
 
 module.exports = renderCalendarsForm;

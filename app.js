@@ -1,7 +1,7 @@
 /* global gapi, window */
 
 var RouteState = require('route-state');
-var showCalendarsFlow = require('./flows/show-calendars-flow');
+var calendarChoosingFlow = require('./flows/calendar-choosing-flow');
 var handleError = require('handle-error-web');
 
 var routeState = RouteState({
@@ -18,10 +18,11 @@ var idToken;
 
 function route(routeDict) {
   // TODO: Routing logic
-  showCalendarsFlow({
+  calendarChoosingFlow({
     accessToken: accessToken,
     idToken: idToken,
-    onSelectedCalendarsUpdate: onSelectedCalendarsUpdate
+    onSelectedCalendarsUpdate: onSelectedCalendarsUpdate,
+    storage: window.localStorage
   });
 }
 
