@@ -1,15 +1,11 @@
 /* global gapi, window */
 
-var RouteState = require('route-state');
 var calendarChoosingFlow = require('./flows/calendar-choosing-flow');
-var breakdownsFlow = require('./flows/breakdowns-flow');
+// var breakdownsFlow = require('./flows/breakdowns-flow');
 var handleError = require('handle-error-web');
+var Flowlocks = require('./flowlocks');
+var callNextTick = require('call-next-tick');
 
-// TODO: Remove routeState. This can all be done through localStorage.
-var routeState = RouteState({
-  followRoute: route,
-  windowObject: window  
-});
 
 var accessToken;
 var idToken;
@@ -18,30 +14,27 @@ var idToken;
   window.onSignIn = onSignIn;
 })());
 
-function route(routeDict) {
-  // TODO: Events-choosing flow. Are flows actually "cycles"?
+function route() {
   // Always render breakdown.
   // Always allow calendar choosing
   // Allow event filtering after calendar choosing
   // Chain calendars, events => breakdown
-
-  calendarChoosingFlow({
+  var state = {
     accessToken: accessToken,
     idToken: idToken,
     onSelectedCalendarsUpdate: onSelectedCalendarsUpdate,
     storage: window.localStorage
-  });
+  };
+  var flowlocks = Flowlocks(
+    [calendarChoosingFlow, eventsFlow, breakdownsFlow],
+    handleError
+  );
+  flowlocks.startFlows(state);
 
-  eventsFilteringFlow({
-    calendars: routeDict.calendars,
-    onFilteredEventsUpdate: onFilteredEventsUpdate,
-    storage: window.localStorage
-  });
-
-  breakdownsFlow({
-    calendars: routeDict.calendars,
-    eventsToFilter: routeDict.eventsToFilter
-  });
+  function onSelectedCalendarsUpdate(selectedCalendars) {
+    console.log('selectedCalendars:', selectedCalendars);
+    // TODO: Update routes, then follow route to show breakdowns flow
+  }
 }
 
 function onSignIn(googleUser) {
@@ -60,14 +53,20 @@ function grantSucceeded(grantResult) {
   // console.log(grantResult);
   accessToken = grantResult.Zi.access_token;
   idToken = grantResult.Zi.id_token;
-  routeState.routeFromHash();
+  // routeState.routeFromHash();
+  route();
 }
 
 function grantFailed(fail) {
   handleError(new Error('Grant failed: ' + JSON.stringify(fail)));
 }
 
-function onSelectedCalendarsUpdate(selectedCalendars) {
-  console.log('selectedCalendars:', selectedCalendars);
-  // TODO: Update routes, then follow route to show breakdowns flow
+function eventsFlow(cell, done) {
+  console.log('eventsFlow started', cell);
+  callNextTick(done, null, cell);
+}
+
+function breakdownsFlow(cell, done) {
+  console.log('breakdownsFlow started', cell);
+  callNextTick(done, null, cell);
 }

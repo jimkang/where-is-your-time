@@ -5,11 +5,11 @@ function Flowlocks(flows, flowsDone) {
   var cancelled = false;
 
   return {
-    startFlow: startFlow,
+    startFlows: startFlows,
     cancel: cancel
   };
 
-  function startFlow(cell) {
+  function startFlows(cell) {
     if (flows.length > 0) {
       waterfall([kickoff].concat(flows.slice(1).map(wrapFlow)), flowsDone);
     }

@@ -15,7 +15,7 @@ function normalFlowChainTest(t) {
     value: 1
   };
 
-  flowlocks.startFlow(simpleTestCell);
+  flowlocks.startFlows(simpleTestCell);
 
   function flow1(cell, done) {
     t.pass('flow1 was called.');
@@ -52,7 +52,7 @@ function cancellationTest(t) {
     value: 1
   };
 
-  flowlocks.startFlow(simpleTestCell);
+  flowlocks.startFlows(simpleTestCell);
 
   function flow1(cell, done) {
     t.pass('flow1 was called.');
@@ -88,7 +88,7 @@ function errorTest(t) {
     value: 1
   };
 
-  flowlocks.startFlow(simpleTestCell);
+  flowlocks.startFlows(simpleTestCell);
 
   function flow1(cell, done) {
     t.pass('flow1 was called.');
