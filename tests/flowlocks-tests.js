@@ -64,7 +64,7 @@ function cancellationTest(t) {
     t.pass('flow2was called.');
     t.equal(cell.value, 2, 'Cell was updated by flow1');
     flowlocks.cancel();
-    callNextTick(done);
+    callNextTick(done, null, cell);
   }
 
   function flow3(cell, done) {
@@ -109,7 +109,7 @@ function errorTest(t) {
 
   function checkFlowEnd(error) {
     t.ok(error, 'An error was passed to the flow callback.');
-    t.equal(error.message, 'Oh no!', 'The error message is the one set by flow2.');
+    t.equal(error.message, 'Oh no', 'The error message is the one set by flow2.');
     t.end();
   }
 }
