@@ -1,6 +1,7 @@
 /* global gapi, window */
 
 var calendarChoosingFlow = require('./flows/calendar-choosing-flow');
+var eventsFlow = require('./flows/events-flow');
 // var breakdownsFlow = require('./flows/breakdowns-flow');
 var handleError = require('handle-error-web');
 var Flowlocks = require('./flowlocks');
@@ -60,11 +61,6 @@ function grantSucceeded(grantResult) {
 
 function grantFailed(fail) {
   handleError(new Error('Grant failed: ' + JSON.stringify(fail)));
-}
-
-function eventsFlow(cell, done) {
-  console.log('eventsFlow started', cell);
-  callNextTick(done, null, cell);
 }
 
 function breakdownsFlow(cell, done) {
