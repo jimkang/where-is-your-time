@@ -1,0 +1,245 @@
+{
+  "summary": "jimkang@gmail.com",
+  "items": [
+    {
+      "id": "vfabtmof7ttndk5h",
+      "htmlLink": "https://www.google.com/calendar/event?eid=aer",
+      "summary": "Occult Choir: Rehearsal",
+      "description": "Singing",
+      "organizer": {
+        "email": "singing@occult.choir"
+      },
+      "start": {
+        "dateTime": "2017-05-26T13:00:00-04:00"
+      },
+      "end": {
+        "dateTime": "2017-05-26T14:00:00-04:00"
+      }
+    },
+    {
+      "id": "9vudvv31hk6h5sos",
+      "htmlLink": "https://www.google.com/calendar/event?eid=OZHZ1dWJwM3YzMWhrNmg1c29zZ28wMDhfMjAxNzA1Mj",
+      "summary": "Occult Choir Call-in",
+      "organizer": {
+        "email": "organizer@occult.choir",
+        "displayName": "Occult Organizer"
+      },
+      "start": {
+        "dateTime": "2017-05-24T13:00:00-04:00"
+      },
+      "end": {
+        "dateTime": "2017-05-24T13:15:00-04:00"
+      }
+    },
+    {
+      "id": "9vudvv31hk6h5sos",
+      "htmlLink": "https://www.google.com/calendar/event?eid=OZHZ1dWJwM3YzMWhrNmg1c29zZ28wMDhfMjAxNzA1Mj",
+      "summary": "Occult Choir Call-in",
+      "organizer": {
+        "email": "organizer@occult.choir",
+        "displayName": "Occult Organizer"
+      },
+      "start": {
+        "dateTime": "2017-05-25T13:00:00-04:00"
+      },
+      "end": {
+        "dateTime": "2017-05-25T13:15:00-04:00"
+      }
+    },
+    {
+      "id": "r7638e6vo5a800b8",
+      "htmlLink": "https://www.google.com/calendar/event?eid=cMzh1NjhkNmU2dm81YTgwMGI4YnBocm9fMjAxNzA1Mj",
+      "summary": "Occult Choir Call-in",
+      "organizer": {
+        "email": "organizer@occult.choir",
+        "displayName": "Occult Organizer"
+      },
+      "start": {
+        "dateTime": "2017-05-22T13:00:00-04:00"
+      },
+      "end": {
+        "dateTime": "2017-05-22T13:15:00-04:00"
+      }
+    },
+    {
+      "id": "31thc29efts41q7d",
+      "htmlLink": "https://www.google.com/calendar/event?eid=MaGNwZ2FhMTI5ZWZ0czQxcTdkNGRrMGNfMjAxNzA1Mj",
+      "summary": "Business Meeting",
+      "description": "A brief sync on business and meetings.",
+      "organizer": {
+        "email": "bob@business.com",
+        "displayName": "Bob"
+      },
+      "start": {
+        "dateTime": "2017-05-22T10:30:00-04:00"
+      },
+      "end": {
+        "dateTime": "2017-05-22T10:55:00-04:00"
+      }
+    },
+    {
+      "id": "5m8b551o2kdg3k6t",
+      "htmlLink": "https://www.google.com/calendar/event?eid=NYjV1M2tpYjUxbzJrZGczazZ0bGNtZWtfMjAxNzA1Mj",
+      "summary": "Occult Choir Call-in",
+      "organizer": {
+        "email": "organizer@occult.choir",
+        "displayName": "Occult Organizer"
+      },
+      "start": {
+        "dateTime": "2017-05-23T13:00:00-04:00"
+      },
+      "end": {
+        "dateTime": "2017-05-23T13:15:00-04:00"
+      }
+    },
+    {
+      "id": "inp68ejnhtrpe48kjj490bbsq4",
+      "htmlLink": "https://www.google.com/calendar/event?eid=aW5wNjhlam5odHJwZTQ4a2pqNDkwYmJzcTQgamlta2FuZ0BzcG90aWZ5LmNv",
+      "summary": "Gutter cleaning",
+      "organizer": {
+        "email": "jimkang@gmail.com",
+        "displayName": "Jim Kang",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2017-05-22T14:00:00-04:00"
+      },
+      "end": {
+        "dateTime": "2017-05-22T16:30:00-04:00"
+      }
+    },
+    {
+      "id": "e7lq3a0umvsdn6oo",
+      "htmlLink": "https://www.google.com/calendar/event?eid=ZcTNzbzBmbmEwdW12c2RuNm9vN2lwbThfMjAxNzA1Mj",
+      "summary": "Space meditation time",
+      "organizer": {
+        "email": "jimkang@gmail.com",
+        "displayName": "Jim Kang",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2017-05-24T13:30:00-04:00"
+      },
+      "end": {
+        "dateTime": "2017-05-24T16:30:00-04:00"
+      }
+    },
+    {
+      "id": "e7lq3a0umvsdn6oo",
+      "htmlLink": "https://www.google.com/calendar/event?eid=ZcTNzbzBmbmEwdW12c2RuNm9vN2lwbThfMjAxNzA1Mj",
+      "summary": "Space meditation time",
+      "organizer": {
+        "email": "jimkang@gmail.com",
+        "displayName": "Jim Kang",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2017-05-25T13:30:00-04:00"
+      },
+      "end": {
+        "dateTime": "2017-05-25T16:30:00-04:00"
+      }
+    },
+    {
+      "id": "05etsqeslo28mbe",
+      "htmlLink": "https://www.google.com/calendar/event?eid=MGZwMjV",
+      "summary": "Public service announcements",
+      "description": "Public service announcements weekly hearing\n\nSee attached agenda and planning docs",
+      "organizer": {
+        "email": "announce@public.gov",
+        "displayName": "Public Announcers"
+      },
+      "start": {
+        "dateTime": "2017-05-23T11:30:00-04:00"
+      },
+      "end": {
+        "dateTime": "2017-05-23T12:00:00-04:00"
+      }
+    },
+    {
+      "id": "6crt72i8nkh5919abn3cj4",
+      "htmlLink": "https://www.google.com/calendar/event?eid=NydDcyaTh",
+      "summary": "Sandwich Committee",
+      "description": "https://sandwich.com",
+      "organizer": {
+        "email": "sandwich@food.food"
+      },
+      "start": {
+        "dateTime": "2017-05-25T15:30:00-04:00"
+      },
+      "end": {
+        "dateTime": "2017-05-25T16:00:00-04:00"
+      }
+    },
+    {
+      "id": "4ecf2tb0m5jjvdmf01lvqihucc",
+      "htmlLink": "https://www.google.com/calendar/event?eid=a",
+      "summary": "Dogs party",
+      "description": "Big dogs and little dogs, red dogs and blue dogs.",
+      "organizer": {
+        "email": "party@dogs.party",
+        "displayName": "Dogs party!"
+      },
+      "start": {
+        "dateTime": "2017-05-23T15:00:00-04:00"
+      },
+      "end": {
+        "dateTime": "2017-05-23T16:00:00-04:00"
+      }
+    },
+    {
+      "id": "hufl2dl83jhpaj85arurq",
+      "htmlLink": "https://www.google.com/calendar/event?eid=b",
+      "summary": "Lamentation time",
+      "organizer": {
+        "email": "sadness@what.sad",
+        "displayName": "Lamentation party"
+      },
+      "start": {
+        "dateTime": "2017-05-24T09:00:00-04:00"
+      },
+      "end": {
+        "dateTime": "2017-05-24T10:00:00-04:00"
+      }
+    },
+    {
+      "id": "ffetiaquir9ggnk22n5uh2",
+      "htmlLink": "https://www.google.com/calendar/event?eid=c",
+      "summary": "Cleansing",
+      "description": "Cleansing ritual",
+      "organizer": {
+        "email": "singing@occult.choir"
+      },
+      "start": {
+        "dateTime": "2017-05-24T10:00:00-04:00"
+      },
+      "end": {
+        "dateTime": "2017-05-24T11:00:00-04:00"
+      }
+    },
+    {
+      "id": "buub7t5srvor4l1i9os31c",
+      "htmlLink": "https://www.google.com/calendar/event?eid=d",
+      "summary": "Days of Atonement",
+      "organizer": {
+        "email": "singing@occult.choir"
+      }
+    },
+    {
+      "id": "oe7efcim1cf6li3op9bql5l4",
+      "htmlLink": "https://www.google.com/calendar/event?eid=e",
+      "summary": "Burnt offerings",
+      "description": "Classic burnt offerings ritual",
+      "organizer": {
+        "email": "schedule@burnt.offerings",
+        "displayName": "The altar by the side entrance"
+      },
+      "start": {
+        "dateTime": "2017-05-26T15:00:00-04:00"
+      },
+      "end": {
+        "dateTime": "2017-05-26T16:00:00-04:00"
+      }
+    }
+  ]
+}

@@ -4,6 +4,8 @@ var request = require('basic-browser-request');
 // var cloneDeep = require('lodash.clonedeep');
 // var findWhere = require('lodash.findwhere');
 
+const aWeekInMilliseconds = 7 * 24 * 60 * 60 * 1000;
+
 function eventsFlow(cell, flowDone) {
   waterfall(
     [
@@ -19,11 +21,15 @@ function eventsFlow(cell, flowDone) {
 
   function getEvents(done) {
     // TODO: queue up requests for events for all calendars.
+    // TODO: Use user-selected start and end dates or ranges.
+    var startDate = new Date();
+    var endDate = new Date(startDate.getTime() + aWeekInMilliseconds);
+
     var reqOpts = {
       method: 'GET',
       url: 'https://www.googleapis.com/calendar/v3/calendars/primary/events?' +
-        // TODO: Use real start and end dates.
-        'timeMin=' + '2017-05-17T00%3A00%3A00Z' + '&' +
+        'timeMin=' + encodeURIComponent(startDate.toISOString()) + '&' +
+        'timeMax=' + encodeURIComponent(endDate.toISOString()) + '&' +
         'singleEvents=true' + '&' +
         'key=' + cell.idToken + '&' +
         'fields=description%2Citems(description%2Cend%2FdateTime%2CendTimeUnspecified%2ChtmlLink%2Cid%2Corganizer%2Cstart%2FdateTime%2Csummary)%2Csummary',

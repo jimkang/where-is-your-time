@@ -14,6 +14,7 @@ build:
 
 test:
 	node tests/flowlocks-tests.js
+	node tests/bucket-events-tests.js
 
 pushall:
 	git push origin gh-pages
